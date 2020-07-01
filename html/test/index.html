@@ -28,6 +28,8 @@
 <script src="js/TweenMax.min.js"></script>
 <script src="js/bas.js"></script>
 <script src="js/OrbitControls-2.js"></script>
+<!--自增加main。js-->
+<script src="../../js/main.js"></script>
 <script id="rendered-js">
     window.onload = init;
     console.ward = function () {}; // what warnings?
@@ -43,8 +45,14 @@
         root.renderer.setPixelRatio(window.devicePixelRatio || 1);
         root.camera.position.set(0, 0, 60);
 
-        var width = 100;
-        var height = 60;
+        if (isMobile()){
+            var width = 50;
+            var height = 65;
+        }else {
+            var width = 100;
+            var height = 60;
+        }
+
 
         var slide = new Slide(width, height, 'out');
         var l1 = new THREE.ImageLoader();
