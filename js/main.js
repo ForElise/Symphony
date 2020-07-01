@@ -1,18 +1,9 @@
-/**
- * 判断访问类型是电脑还是手机
- *
- * @author 何明胜
- *
- * 2017年9月27日
- */
-
 $(function(){
     var mobile_flag = isMobile(); // true为PC端，false为手机端
     if(mobile_flag){
         $('.aside-menu').on('click',function () {
             $('.mav-main div:eq(0)').removeClass('aside-nav');
             $('.mav-main div:eq(0)').addClass('m_aside-nav');
-            $('.aside-menu').attr('id','m_phone');
         });
     }
 });
